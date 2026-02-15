@@ -3,32 +3,38 @@
     "tasks": [
         {
             "type": "cppbuild",
-            "label": "C/C++: g++.exe build active file",
+            "label": "Build with graphics.h",
             "command": "C:\\MINGW\\bin\\g++.exe",
+
             "args": [
-    "-g",
-    "${file}",
-    "-o",
-    "${fileDirname}\\${fileBasenameNoExtension}.exe",
-    "-lbgi",
-    "-lgdi32",
-    "-lcomdlg32",
-    "-luuid",
-    "-loleaut32",
-    "-lole32",
-    "-lwinmm"
-],
+                "-g",
+                "${file}",
+
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe",
+
+                "-IC:\\MINGW\\include",
+                "-LC:\\MINGW\\lib",
+
+                "-lbgi",
+                "-lgdi32",
+                "-lcomdlg32",
+                "-luuid",
+                "-loleaut32",
+                "-lole32",
+                "-lwinmm"
+            ],
+
             "options": {
                 "cwd": "${fileDirname}"
             },
-            "problemMatcher": [
-                "$gcc"
-            ],
+
+            "problemMatcher": ["$gcc"],
+
             "group": {
                 "kind": "build",
                 "isDefault": true
-            },
-            "detail": "compiler: C:\\MINGW\\bin\\g++.exe"
+            }
         }
     ]
 }
